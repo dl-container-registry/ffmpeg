@@ -1,0 +1,10 @@
+# Ignore test files
+*.mp4
+*.avi
+*.mkv
+
+# Singularity images
+*.img
+
+# Version tag
+version.txt
