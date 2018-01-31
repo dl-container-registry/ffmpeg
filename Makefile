@@ -4,17 +4,18 @@ SINGULARITY_NAME:=nvidia-ffmpeg.img
 TAG:=
 
 
+.PHONY: build
 build:
 	docker build -t $(CONTAINER_NAME) .
-
-tag: version.txt
 
 version.txt: build
 	./tag.sh "$(CONTAINER_NAME)" > version.txt
 
-push: tag
+.PHONY: push
+push: version.txt
 	docker push $(CONTAINER_NAME)
 
+.PHONY: singularity
 singularity: $(SINGULARITY_NAME)
 
 $(SINGULARITY_NAME): tag
