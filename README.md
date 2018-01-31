@@ -1,5 +1,10 @@
 # NVIDIA accelerated ffmpeg
 
+[![Build Status](https://travis-ci.org/dl-container-registry/ffmpeg.svg?branch=master)](https://travis-ci.org/dl-container-registry/ffmpeg)
+[![Docker Stars](https://img.shields.io/docker/stars/willprice/nvidia-ffmpeg.svg)](https://hub.docker.com/r/willprice/nvidia-ffmpeg/)
+[![Singularity hub link](https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg)](https://singularity-hub.org/collections/521) 
+
+
 ## Features
 
 * [NVENCODE acceleration](https://developer.nvidia.com/nvidia-video-codec-sdk#NVENCFeatures)
