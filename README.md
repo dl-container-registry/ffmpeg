@@ -3,7 +3,7 @@
 ## Features
 
 * [NVENCODE acceleration](https://developer.nvidia.com/nvidia-video-codec-sdk#NVENCFeatures)
-  [NVDECODE acceleration](https://developer.nvidia.com/nvidia-video-codec-sdk#NVDECFeatures))
+*  [NVDECODE acceleration](https://developer.nvidia.com/nvidia-video-codec-sdk#NVDECFeatures)
 * [video codec: x264](https://www.videolan.org/developers/x264.html)
 * [video codec: x265](https://www.videolan.org/developers/x265.html)
 * [audio codec: AAC](https://github.com/mstorsjo/fdk-aac)
