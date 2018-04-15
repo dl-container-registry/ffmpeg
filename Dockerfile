@@ -134,6 +134,11 @@ RUN unzip Video_Codec_SDK_8.0.14 && \
     cp -r Video_Codec_SDK_8.0.14/Samples/common/lib/ \
           /install/lib/nvenc_sdk_8.0
 
+## FFMPEG NV CODEC HEADERS ##
+WORKDIR /src/deps
+RUN git clone https://git.videolan.org/git/ffmpeg/nv-codec-headers.git
+WORKDIR /src/deps/nv-codec-headers
+RUN PREFIX=/install make install
 
 ## FFMPEG ##
 WORKDIR /src
