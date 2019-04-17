@@ -1,19 +1,19 @@
 SHELL:=bash
-CONTAINER_NAME:=willprice/nvidia-ffmpeg
-SINGULARITY_NAME:=nvidia-ffmpeg.img
-TAG:=
-
+BASE_NAME:=nvidia-ffmpeg
+CONTAINER_NAME:=willprice/$(BASE_NAME)
+SINGULARITY_NAME:=$(BASE_NAME).simg
+TAG:=latest
 
 .PHONY: build
 build:
-	docker build -t $(CONTAINER_NAME) .
+	docker build -t $(CONTAINER_NAME):$(TAG) .
 
 version.txt: build
 	./tag.sh "$(CONTAINER_NAME)" > version.txt
 
 .PHONY: push
 push: version.txt
-	docker push $(CONTAINER_NAME)
+	docker push $(CONTAINER_NAME):$(TAG)
 
 .PHONY: singularity
 singularity: $(SINGULARITY_NAME)
